@@ -1,4 +1,4 @@
-package org.example.springjwt.payload.response;
+package org.example.authenticationservice.payload.response;
 
 public class MessageResponse {
   private String message;

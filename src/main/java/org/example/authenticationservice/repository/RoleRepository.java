@@ -1,12 +1,12 @@
-package org.example.springjwt.repository;
+package org.example.authenticationservice.repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import org.example.springjwt.models.ERole;
-import org.example.springjwt.models.Role;
+import org.example.modelproject.model.ERole;
+import org.example.modelproject.model.Role;
 
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long> {

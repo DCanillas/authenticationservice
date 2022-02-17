@@ -1,4 +1,4 @@
-package org.example.springjwt.payload.request;
+package org.example.authenticationservice.payload.request;
 
 import javax.validation.constraints.NotBlank;
 

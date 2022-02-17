@@ -1,4 +1,4 @@
-package org.example.springjwt.payload.response;
+package org.example.authenticationservice.payload.response;
 
 import java.util.List;
 

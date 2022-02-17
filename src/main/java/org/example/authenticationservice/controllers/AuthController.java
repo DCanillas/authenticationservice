@@ -1,19 +1,16 @@
-package org.example.springjwt.controllers;
+package org.example.authenticationservice.controllers;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-
-import javax.validation.Valid;
-
-import org.example.springjwt.payload.request.LoginRequest;
-import org.example.springjwt.payload.request.SignupRequest;
-import org.example.springjwt.payload.response.JwtResponse;
-import org.example.springjwt.payload.response.MessageResponse;
-import org.example.springjwt.repository.RoleRepository;
-import org.example.springjwt.security.jwt.JwtUtils;
-import org.example.springjwt.security.services.UserDetailsImpl;
+import org.example.modelproject.model.ERole;
+import org.example.modelproject.model.Role;
+import org.example.modelproject.model.User;
+import org.example.authenticationservice.payload.request.LoginRequest;
+import org.example.authenticationservice.payload.request.SignupRequest;
+import org.example.authenticationservice.payload.response.JwtResponse;
+import org.example.authenticationservice.payload.response.MessageResponse;
+import org.example.authenticationservice.repository.RoleRepository;
+import org.example.authenticationservice.repository.UserRepository;
+import org.example.authenticationservice.security.jwt.JwtUtils;
+import org.example.authenticationservice.security.services.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -21,16 +18,13 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import org.example.springjwt.models.ERole;
-import org.example.springjwt.models.Role;
-import org.example.springjwt.models.User;
-import org.example.springjwt.repository.UserRepository;
+import javax.validation.Valid;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController

@@ -1,4 +1,4 @@
-package org.example.springjwt.controllers;
+package org.example.authenticationservice.controllers;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
